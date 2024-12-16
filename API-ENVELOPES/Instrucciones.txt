@@ -1,0 +1,29 @@
+npm init -y
+npm i express
+npm i nodemon -D
+
+Para ejecutar:
+npm run dev
+
+GET para Envelopes:
+http://localhost:4001/api/envelopes
+
+GET para transacciones de un Envelope:
+http://localhost:4001/api/envelopes/<id del envelope>/transactions
+ejemplo: http://localhost:4001/api/envelopes/1/transactions
+
+POST para envelope:
+http://localhost:4001/api/envelopes
+Ejemplo para el body:
+{
+    "name": "Entertainment",
+    "limit": 300
+}
+
+POST para una transaccion:
+http://localhost:4001/api/envelopes/<id del envelope>/transactions
+Ejemplo para el body:
+{
+  "amount": 5.00,
+  "description": "Chicle"
+}
